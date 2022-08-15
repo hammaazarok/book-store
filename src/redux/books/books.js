@@ -1,7 +1,7 @@
 // Actions
-const LOAD = 'LOAD';
-const ADD = 'ADD';
-const REMOVE = 'REMOVE';
+const LOAD = 'bookstore/books/LOAD_BOOK';
+const ADD = 'bookstore/books/ADD_BOOK';
+const REMOVE = 'bookstore/books/REMOVE_BOOK';
 
 // Reducer
 export default function booksReducer(state = [], action = {}) {
