@@ -7,7 +7,7 @@ export default function categoriesReducer(state = [], action = {}) {
     case CHECK:
       return 'Under Constuction';
     default:
-      return [...state];
+      return state;
   }
 }
 
