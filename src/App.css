@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,600;0,700;1,400;1,500&family=Roboto:ital,wght@0,100;0,600;0,700;1,400;1,500+Slab:ital,wght@0,100;0,600;0,700;1,400;1,500&display=swap");
+
 body {
   background-color: #f5f6fa;
   margin: 4%;
@@ -18,6 +19,7 @@ body {
   font-weight: 700;
   color: #0290ff;
 }
+
 .link {
   padding-left: 20px;
   opacity: 0.5;
@@ -51,7 +53,6 @@ body {
 
 li {
   display: list-item;
-  text-align: -webkit-match-parent;
 }
 
 .books {
@@ -125,6 +126,7 @@ li {
   color: #687580;
   cursor: pointer;
 }
+
 .action-buttons {
   display: flex;
   align-items: center;
@@ -221,36 +223,39 @@ li {
 }
 
 @keyframes growProgressBar {
-  0%, 33% { --pgPercentage: 0; }
+  0%,
+  33% { --pgPercentage: 0; }
   100% { --pgPercentage: var(--value); }
 }
 
+/* stylelint-disable */
 @property --pgPercentage {
   syntax: '<number>';
   inherits: false;
   initial-value: 0;
 }
 
+/* stylelint-enable */
+
 div[role="progressbar"] {
   --size: 4.25rem;
   --fg: #307bbe;
   --bg: #e8e8e8;
   --pgPercentage: var(--value);
+
   animation: growProgressBar 3s 1 forwards;
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: 
+  background:
     radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
-    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
-    ;
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
   font-family: Helvetica, Arial, sans-serif;
   font-size: calc(var(--size) / 5);
   color: var(--fg);
 }
-
 
 .horizontal-divider {
   height: 0.125rem;
@@ -258,6 +263,7 @@ div[role="progressbar"] {
   width: 100%;
   margin: 2.5rem 0 1.813rem;
 }
+
 .add-form {
   margin-top: 20px;
   display: flex;
@@ -313,5 +319,3 @@ div[role="progressbar"] {
   font-weight: bold;
   font-family: "Roboto Slab", serif;
 }
-
-
