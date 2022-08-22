@@ -238,7 +238,7 @@ li {
 /* stylelint-enable */
 
 div[role="progressbar"] {
-  --size: 4.25rem;
+  --size: 4.24rem;
   --fg: #307bbe;
   --bg: #e8e8e8;
   --pgPercentage: var(--value);
